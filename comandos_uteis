@@ -1,0 +1,92 @@
+iniciar um projeto: npm init -y
+
+dependencias iniciais mpack: npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2 (so precisa em dev)
+
+retirado do package.json "test": "echo \"Error: no test specified\" && exit 1"
+
+atualiza brownser "no arquivo package json
+"scripts": {
+  "dev": "webpack-dev-server --progress --colors --inline --hot"
+},
+
+npm run dev para criar e rodar a aplicaçao
+
+para gerar o bundle .\node_modules\.bin\webpack
+
+instalar babel para traduzir para ecmascript2015
+npm i --save-dev babel-core@6.22.1 babel-loader@6.2.10 babel-preset-es2015@6.22.0
+
+aceitar o comando spread "..." json
+npm i --save-dev babel-plugin-transform-object-rest-spread@6.22.0
+
+instalar react
+npm i --save-dev react@15.4.2
+
+presete pra react, nao esquecer de adicionar no webpack.config
+npm i --save-dev babel-preset-react@6.22.0
+
+instalar css
+npm i --save-dev extract-text-webpack-plugin@1.0.1 style-loader@0.13.1 css-loader@0.26.1
+
+resumo para iniciar um projeto react
+mkdir projeto
+cd projeto
+npm init -y
+npm i --save-dev react@15.4.2 react-dom@15.4.2  babel-core@6.22.1 babel-loader@6.2.10 babel-preset-es2015@6.22.0 babel-preset-react@6.22.0 webpack@1.14.0 webpack-dev-server@1.16.2
+
+react usa .jsx
+
+no webpack.config para 
+resolve: {
+		extensions: ['','.js','.jsx']
+	},
+
+componente de classe quer um metodo render obrigatório
+
+arrumar o contexto da chamada do metodo do js 
+this.handleChange = this.handleChange.bind(this)
+
+
+
+--- iniciando backend
+npm init -y
+
+
+dependencia para tratar requisicao json
+npm i --save-dev body-parser@1.15.2 
+ 
+fmk web
+express@4.14.0 
+ 
+conexao banco de dados/mapeamento/validacoes
+mongoose@4.7.0 
+ 
+facilitar criação de webservice
+node-restful@0.2.5 
+ 
+launcher para node
+pm2@2.1.5
+
+nodemon launcher dev
+nodemon@1.11.0
+
+pm2 monitor
+
+
+----
+dependencias frontend
+--webpack
+npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2
+
+--conversores
+npm i --save-dev babel-core@6.22.1 babel-loader@6.2.10 babel-plugin-react-html-attrs@2.0.0 
+npm i --save-dev babel-plugin-transform-object-rest-spread@6.22.0 babel-preset-es2015@6.22.0 babel-preset-react@6.22.0
+
+--css imagems
+npm i --save-dev extract-text-webpack-plugin@1.0.1 css-loader@0.26.1 style-loader@0.13.1 file-loader@0.9.0
+
+--template
+npm i --save-dev bootstrap@3.3.7 font-awesome@4.7.0
+
+--react
+npm i --save-dev react@15.4.2 react-dom@15.4.2 react-router@3.0.2 axios@0.15.3
