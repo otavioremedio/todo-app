@@ -1,4 +1,6 @@
 import React from 'react'
+
+//conecta com as actions
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 

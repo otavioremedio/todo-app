@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+//bind das actions
 import { bindActionCreators } from 'redux'
 
 import Grid from '../template/grid'
@@ -49,7 +50,11 @@ class TodoForm extends Component {
     }
 }
 
+//mapeia o estado, store para as propriedades dos componentes
+//mexer direto com props, state fica global pelo redux
 const mapStateToProps = state => ({description: state.todo.description})
+
+//faz os binds e dispara as ações
 const mapDispatchToProps = dispatch => 
     bindActionCreators({ add, changeDescription, search, clear }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(TodoForm)
